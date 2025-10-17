@@ -43,14 +43,18 @@ project/
   - windspeed_10m_max — максимальна швидкість вітру
 
   Запуск:
+  ```bash
   python MlWeather.py
+  ```
   Результат:
   CSV-файли у папці data/,
   наприклад:
+  ```bash
   data/open_meteo_weather_2015.csv
   data/open_meteo_weather_2016.csv
   ...
   data/open_meteo_weather.csv
+  ```
 
 ---
 
@@ -83,39 +87,44 @@ R² (коефіцієнт детермінації)
 ---
 
 Приклад виконання
-
+```bash
 python MachineLearning.py
-
+```
 Вивід прикладу:
-
+```bash
 MSE: 19.66054557247043
 R²: -0.009644364857032572
+```
 
 ---
 
 3. Встановлення залежностей
 
 Рекомендується створити віртуальне середовище:
-
+```bash
 python -m venv venv
 source venv/bin/activate  # або venv\Scripts\activate на Windows
 pip install -r requirements.txt
-
+```
 Файл requirements.txt:
+```bash
 pandas
 numpy
 scikit-learn
 requests
+```
 
 ---
 
 4. Використані технології
-Категорія	Технології
-Мова	Python 3.10+
-Робота з даними	pandas, numpy
-Машинне навчання	scikit-learn
-API	requests, Open-Meteo API
-Інше	csv, datetime, os, time
+| Категорія            | Технології               |
+| -------------------- | ------------------------ |
+| **Мова**             | Python 3.10+             |
+| **Робота з даними**  | pandas, numpy            |
+| **Машинне навчання** | scikit-learn             |
+| **API**              | requests, Open-Meteo API |
+| **Інше**             | csv, datetime, os, time  |
+
 
 ---
 
@@ -133,4 +142,4 @@ API	requests, Open-Meteo API
 
 6. Ліцензія
    
-Проєкт розповсюджується за умовами файлу LICENSE
+This project is licensed under the [MIT License](LICENSE).
