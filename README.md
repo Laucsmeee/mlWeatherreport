@@ -62,27 +62,27 @@ project/
 
   Модуль:
 
-Об’єднує всі CSV у єдиний DataFrame.
+  1.Об’єднує всі CSV у єдиний DataFrame.
 
-Формує нові ознаки (features):
+  2.Формує нові ознаки (features):
 
-temp_mean, temp_diff — середня та різниця температур.
+    - temp_mean, temp_diff — середня та різниця температур.
 
-temp_wind_interaction, tempdiff_wind_interaction, temp_weekday_interaction — взаємодія факторів.
+    - temp_wind_interaction, tempdiff_wind_interaction, temp_weekday_interaction — взаємодія факторів.
 
-precip_lag1/2/3 — лагові значення опадів.
+    - precip_lag1/2/3 — лагові значення опадів.
 
-precip_roll3/5/7 — ковзні середні.
+    - precip_roll3/5/7 — ковзні середні.
 
-season, weekday — пори року та дні тижня.
+    - season, weekday — пори року та дні тижня.
 
-Навчає модель DecisionTreeRegressor (max_depth=5).
+  3. Навчає модель DecisionTreeRegressor (max_depth=5).
 
-Виводить метрики якості:
+  4. Виводить метрики якості:
 
-MSE (Mean Squared Error)
+    - MSE (Mean Squared Error)
 
-R² (коефіцієнт детермінації)
+    - R² (коефіцієнт детермінації)
 
 ---
 
