@@ -47,6 +47,7 @@ project/
   python MlWeather.py
   ```
   Результат:
+  
   CSV-файли у папці data/,
   наприклад:
   ```bash
