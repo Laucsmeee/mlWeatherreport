@@ -1,11 +1,11 @@
-# Weather ML — прогнозування опадів у Києві
+# Weather ML — Precipitation Forecast in Kyiv
 
-Цей проєкт збирає історичні погодні дані з Open-Meteo API та застосовує модель машинного навчання для прогнозування кількості опадів.
-Основна мета — навчити модель знаходити залежності між температурою, вітром, днем тижня, сезоном та кількістю опадів.
+This project collects historical weather data from the Open-Meteo API and applies a machine learning model to predict precipitation.
+The main goal is to train a model to find relationships between temperature, wind, day of the week, season, and precipitation.
 
 ---
 
-# Структура проєкту
+# Project Structure
 
 ```bash
 project/
@@ -22,34 +22,34 @@ project/
 ```
 ---
 
-# Збір даних (get_data.py)
+# Data Collection (get_data.py)
 
-Скрипт отримує історичні дані про погоду в Києві за допомогою Open-Meteo Archive API.
-Дані збираються по 14 днів, щоб уникнути обмежень API.
+The script fetches historical weather data for Kyiv using the Open-Meteo Archive API.
+Data is collected in 14-day intervals to avoid API limits.
 
- Параметри:
+ Parameters:
 
-- Місто: Київ
+- City: Kyiv
 
-- Координати: LAT = 50.45, LON = 30.52
+- Coordinates: LAT = 50.45, LON = 30.52
 
-- Джерело: https://open-meteo.com
-  - temperature_2m_max — максимальна температура
+- Source: https://open-meteo.com
+  - temperature_2m_max — maximum temperature
 
-  - temperature_2m_min — мінімальна температура
+  - temperature_2m_min — minimum temperature
 
-  - precipitation_sum — сума опадів
+  - precipitation_sum — total precipitation
+    
+  - windspeed_10m_max — maximum wind speed
 
-  - windspeed_10m_max — максимальна швидкість вітру
-
-  Запуск:
+  Run:
   ```bash
   python MlWeather.py
   ```
-  Результат:
+  Output:
   
-  CSV-файли у папці data/,
-  наприклад:
+  CSV files in the data/ folder, for example:
+  
   ```bash
   data/open_meteo_weather_2015.csv
   data/open_meteo_weather_2016.csv
@@ -59,11 +59,11 @@ project/
 
 ---
 
-  # 2. Модель машинного навчання (ml_model.py)
+  # 2. Machine Learning Model (ml_model.py)
 
-  Модуль:
+  The module:
 
-  1.Об’єднує всі CSV у єдиний DataFrame.
+  1.Merges all CSV files into a single DataFrame.
 
   2.Формує нові ознаки (features):
 
